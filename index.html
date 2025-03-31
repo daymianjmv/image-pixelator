@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Image Pixelator - Easily pixelate your images online. Upload an image, adjust the pixelation level, and download the result.">
+    <meta name="keywords" content="image pixelator, pixelate images, online image editor, pixelation tool, image processing">
+    <meta name="author" content="d4ym1an">
+    <link rel="icon" href="icon.png" type="image/png">
+    <title>Image Pixelator - Pixelate Your Images Online</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #121212; /* Dark background */
+            color: #ffffff; /* Light text */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        canvas {
+            border: 1px solid #444; /* Subtle border */
+            margin-top: 20px;
+            background-color: #1e1e1e; /* Dark canvas background */
+            max-width: 90%;
+            height: auto;
+        }
+        .controls {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        input, button {
+            background-color: #333; /* Dark input and button background */
+            color: #fff; /* Light text */
+            border: 1px solid #555; /* Subtle border */
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        input[type="number"] {
+            width: 80px;
+            text-align: center;
+        }
+        button:hover {
+            background-color: #444; /* Slightly lighter on hover */
+            cursor: pointer;
+        }
+        label {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        input[type="file"] {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Pixelator</h1>
+    <div class="controls">
+        <label for="imageInput">Upload an Image:</label>
+        <input type="file" id="imageInput" accept="image/png, image/jpeg, image/jpg, image/webp, image/bmp" aria-label="Upload an image to pixelate">
+        <p style="font-size: 0.9rem; color: #aaa;">Supported formats: PNG, JPEG, JPG, WEBP, BMP</p>
+    </div>
+    <div class="controls">
+        <label for="pixelationInput">Pixelation Level:</label>
+        <input type="number" id="pixelationInput" min="1" max="50" value="10" aria-label="Set pixelation level between 1 and 50">
+    </div>
+    <canvas id="canvas" aria-label="Pixelated image preview"></canvas>
+    <div class="controls">
+        <button id="downloadButton" aria-label="Download the pixelated image">Download Pixelated Image</button>
+    </div>
+    <footer style="margin-top: 20px; font-size: 0.9rem;">
+        <p>Created by <a href="https://github.com/d4ym1an" target="_blank" style="color: #1e90ff; text-decoration: none;">d4ym1an</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
