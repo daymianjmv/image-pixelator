@@ -1,6 +1,7 @@
 # Image Pixelator
 
 Image Pixelator is a simple tool that allows you to transform images into pixelated versions. This can be useful for creating retro-style graphics, anonymizing parts of an image, or just for fun!
+[USE HERE](https://imgpixelator.netlify.app)
 
 ## Features
 
